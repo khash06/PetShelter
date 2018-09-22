@@ -1,0 +1,40 @@
+<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+
+
+<main>
+  <h3 class="title">Details about {{_pet.name}}</h3>
+
+      <mat-list class="list">
+        <mat-list-item>Pet Type: {{_pet.type}}</mat-list-item>
+        <mat-list-item>Description: {{_pet.description}}</mat-list-item>
+     </mat-list>
+    <h4 class="title2">Skills:</h4>
+      <mat-list class="list2">
+        <ol>
+          <li *ngIf="_pet.skill1"><mat-list-item>{{_pet.skill1}}</mat-list-item></li>
+          <li *ngIf="_pet.skill2"><mat-list-item>{{_pet.skill2}}</mat-list-item></li>
+          <li *ngIf="_pet.skill3"><mat-list-item>{{_pet.skill3}}</mat-list-item></li>
+        </ol>
+      </mat-list>
+
+  <!-- <table>
+  <tr>
+    <th>Pet Type:</th>
+    <td>{{_pet.type}}</td>
+  </tr>
+  <tr>
+    <th>Description:</th>
+    <td>{{_pet.description}}</td>
+  </tr>
+  <tr>
+    <th>Skills:</th>
+    <td>{{_pet.skill1}}</td>
+    <td>{{_pet.skill2}}</td>
+    <td>{{_pet.skill3}}</td>
+  </tr>
+  <th>Likes</th>
+  <td>{{_pet.likes}}</td>
+</table> -->
+<button mat-button (click)="deleteOne(_pet._id)">Adopt this pet!</button><button mat-button [routerLink]="['/pets']">Home</button>
+
+</main>

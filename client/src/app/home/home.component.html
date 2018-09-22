@@ -1,0 +1,53 @@
+<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+
+
+
+<h4 class="title">These pets are looking for a home!</h4>
+<a class="addButton" [routerLink]="['new']">Click here to add a new pet to the shelter</a>
+<div>
+  <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+      <mat-cell *matCellDef="let pet">{{pet.name}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="type">
+        <mat-header-cell *matHeaderCellDef>Type</mat-header-cell>
+        <mat-cell *matCellDef="let pet">{{pet.type}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="actions">
+          <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+          <mat-cell *matCellDef="let pet">
+            <button mat-button [routerLink]="[pet._id, 'edit']">Edit</button>
+            <button mat-button [routerLink]="[pet._id]">Details</button>
+          </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </table>
+</div>
+
+
+
+
+
+
+<!-- <main>
+  <h4>These pets are looking for a home!</h4>
+  <a [routerLink]="['new']">Add a pet to the shelter</a>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pet of pets">
+        <td>{{pet.name}}</td>
+        <td>{{pet.type}}</td>
+        <td><button mat-button color="primary" [routerLink]="[pet._id, 'edit']">Edit</button><button mat-button color="primary" [routerLink]="[pet._id]">Details</button></td>
+      </tr>
+    </tbody>
+  </table>
+</main> -->

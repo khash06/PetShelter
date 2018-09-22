@@ -1,0 +1,27 @@
+.title {
+    padding-left: 20px;
+    font-family: 'Bitter', serif;
+}
+
+.addButton {
+    padding-left: 20px;
+    margin-top: 20px;
+    font-family: 'Bitter', serif;
+    text-decoration: none;
+}
+
+.list {
+    padding-left: 20px;
+}
+
+.title2{
+    margin-bottom: 0px;
+    padding-left: 20px;
+    font-family: 'Bitter', serif;
+}
+
+.list2 {
+    padding-left: 20px;
+    padding-top: 0px;
+
+}

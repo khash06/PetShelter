@@ -1,0 +1,33 @@
+<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+
+
+
+<main>
+  <h4 class="title">Know of a pet needing a home?</h4>
+  <p *ngIf="errors['description']">{{errors['description']['message']}}</p>
+  <p *ngIf="errors['type']">{{errors['type']['message']}}</p>
+  <p *ngIf="errors['name']">{{errors['name']['message']}}</p>
+  <form class="form" (submit)="makePet()">
+    <mat-form-field class="inputs">
+      <input matInput placeholder="Pet Name" name="name" [(ngModel)]="_pet.name"><br>
+    </mat-form-field><br>
+    <mat-form-field class="inputs">
+      <input matInput placeholder="Pet Type" name="type" [(ngModel)]="_pet.type"><br>
+    </mat-form-field><br>
+    <mat-form-field class="inputs">
+      <input matInput placeholder="Pet Description" name="description" [(ngModel)]="_pet.description"><br>
+    </mat-form-field><br>
+    <h4 class="title2">Skills:</h4><br>
+    <mat-form-field class="inputs">
+      <input matInput placeholder="Skill 1" name="skill1" [(ngModel)]="_pet.skill1">
+    </mat-form-field><br>
+    <mat-form-field class="inputs">
+      <input matInput placeholder="Skill 2" name="skill2" [(ngModel)]="_pet.skill2">
+    </mat-form-field><br>
+    <mat-form-field class="inputs">
+      <input matInput placeholder="Skill 3" name="skill3" [(ngModel)]="_pet.skill3">
+    </mat-form-field><br>
+      <button mat-button>Add Pet</button>
+    <button mat-button [routerLink]="['pets']">Cancel</button>
+  </form>
+</main>

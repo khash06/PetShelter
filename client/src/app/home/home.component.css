@@ -1,0 +1,21 @@
+table {
+    width: 60%;
+    margin-top: 40px;
+    padding-left: 20px;
+}
+
+.title {
+    padding-left: 20px;
+    font-family: 'Bitter', serif;
+}
+
+.addButton {
+    padding-left: 20px;
+    font-family: 'Bitter', serif;
+    text-decoration: none;
+}
+
+.mat-column-actions {
+    display: flex;
+    justify-content: center;
+}
